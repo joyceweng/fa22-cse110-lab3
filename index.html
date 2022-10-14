@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="mystyle.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LAB MEETINGS</title>
   </head>
   <body>
-    <details>
-        <summary>Welcome</summary>
-        <p>hello</p>
-    </details>
-    <h1>First Lab Meeting</h1>
+    <div class="container">
+      <div class="box" id="box1">
+        <h1>First Lab Meeting</h1>
+      </div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+      
+    </div>
+
     <img src="https://t4.ftcdn.net/jpg/04/59/86/27/360_F_459862700_blwVQ5me7hzE64Rfe40hX1yycwipwRw1.jpg" width=600
-    alt="Hello!">
-    <h2>Welcome to Week 1</h2>
-    <h2>Date: 10/3/22</h2>
-        <header>
-            <nav>
-              <ul>
-                <li><a href="#attendance">Attendance</a></li>
-                <li><a href="#agenda">Agenda</a></li>
-                <li><a href="#tasks">Tasks</a></li>
-                <li><a href="#notes">Notes</a></li>
-              </ul>
-            </nav>
-        </header>
+    alt="Hello!" class="center">
+
+    <header>
+      <div class="wrapper">
+        <div class="item" id="item1">
+          <h2>Welcome to Week 1 </h2>
+        </div>
+
+        <div class="item" id="item2">
+            <h2>Date: 10/3/22 </h2>
+        </div>
+
+        <div class="item" id="item3">
+            <h2>: )</h2>
+        </div>
+      </div>
+
+        <nav>
+          <ul>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#tasks">Tasks</a></li>
+            <li><a href="#notes">Notes</a></li>
+          </ul>
+        </nav>
+        <details>
+          <summary>Welcome</summary>
+          <b>Hello</b>
+        </details>
+    </header>
+
     <hr>
-      <main>
-        <h2 id="attendance">Attendance</h2>
+
+    <main>
+      <h2 id="attendance">Attendance</h2>
+      <div class="step">
         <ol>
-          <li><input type="checkbox"> Apple</li>
-          <li><input type="checkbox"> Ben</li>
-          <li><input type="checkbox"> Cherry</li>
-          <li><input type="checkbox"> Doggy</li>
-          <li><input type="checkbox"> Elephant</li>
+        <li><input type="checkbox"> Apple</li>
+        <li><input type="checkbox"> Ben</li>
+        <li><input type="checkbox"> Cherry</li>
+        <li><input type="checkbox"> Doggy</li>
+        <li><input type="checkbox"> Elephant</li>
         </ol>
-        <h2 id="agenda">Agenda</h2>
+      </div>
+      <h2 id="agenda">Agenda</h2>
+      <div class="step">
         <h4>Lab Requirements</h4>
         <ul>
             <li>Attend at least one meeting each week</li>
@@ -45,7 +72,9 @@
             <li>15 - 20 minutes</li>
             <li>Each group will give updates</li>
         </ul>
-        <h2 id="tasks">Tasks</h2>
+      </div>
+      <h2 id="tasks">Tasks</h2>
+      <div class="step">
         <h4>Unfinished business from last meeting</h4>
         <ol>
             <li>Schedule meeting</li>
@@ -56,23 +85,36 @@
             <li>Update Github</li>
             <li>Test script</li>
         </ol>
-        <h2 id="notes">Notes</h2>
-        <p>Remember to introduce yourself to your team</p>
-      </main>
-      <hr>
+      </div>
+      <h2 id="notes">Notes</h2>
+      <div class="step">
+        <p>Remember to introduce yourself to your team!!!</p>
+      </div>
+    </main>
+
+    <hr>
+
+    <div class="play">
+    <div id="audio">
       <h2>Audio</h2>
       <audio controls>
         <source src="./audio/charlie.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
       </audio>
+    </div>
+    <div id="video">
       <h2>Video</h2>
-      <video width="320" height="240" controls>
+      <video width="400" height="300" controls>
         <source src="./video/video.mp4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
-      <hr>
+    </div>
+  </div>
+
+    <hr>
+
     <footer>
-      <form onsubmit="alert('Hello')">
+      <form onsubmit="alert('Hello!')">
         <input type="text" placeholder="Enter Email Address">
         <button>Submit</button>
       </form>
