@@ -11,7 +11,7 @@ body {
 
 html {
     font-family: "myFont", "Bitstream Vera Serif", serif;
-  }
+}
 
 .p {
     font-family: myFont;
@@ -32,6 +32,18 @@ ul, ol {
     display: inline-block;
     text-align: left;
     margin: 0em;
+}
+
+li.attendance ~ li {
+    text-decoration: line-through;
+}
+
+p.foot + p {
+    color:#26378d;
+}
+
+div.play {
+    margin-top: 20px;
 }
 
 details {
@@ -57,7 +69,9 @@ main h2 {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     background-color: #cfe7d4;
-    border: solid 1px #4a9445;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #4a9445;
     border-radius: 6px;
     line-height: 18px;
     overflow: hidden;
@@ -88,23 +102,6 @@ main {
     text-align: center;
 }
 
-.play {
-    text-align: center;
-}
-
-
-/* h2 { 
-    line-height: 1cm; 
-    text-align: center;
-    border: 1.5px solid rgb(80, 82, 82); 
-    margin: 10px 10px 10px 10px;
-    padding: 2px;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:9px;
-} */
-
 h3 { word-spacing: 4mm; }
 
 h4 { 
@@ -112,27 +109,33 @@ h4 {
     text-decoration: underline;
 }
 
-p {
-    font-size: 1em;
-    min-width: none;
+.step > p {
+    color: #26378d;
+    font-size: large;
 }
 
-a[href*="notes"] {
-    color: rgb(135, 36, 36);
+div p {
+    min-width: none;
+    font-size: 1em;
+}
+
+[class="play"] {
+    text-align: center;
 }
 
 p:first-letter {
     font-size: 1.5em;
     text-decoration: none;
-    max-width: 10px;
+    min-width: 10px;
 }
 
 .container {
+    display: flex;
     color: rgb(22, 66, 107);
+    font-size: larger;
     text-align: center;
     line-height: 80px;
     background-color: hsl(0, 0%, 70%);
-    display: flex;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
@@ -141,6 +144,7 @@ p:first-letter {
     align-content: center;
     position: sticky;
     top: 0;
+    opacity: 0.8;
 }
 
 #box1 {
@@ -148,13 +152,13 @@ p:first-letter {
     width: 600px;
     background-color: #e0dddd;
     border-radius: 0px;
-    line-height: 10px;
+    line-height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     outline: 0.2rem solid rgb(74, 87, 100);
-    flex-grow: 4;
+    flex-grow: 0.3;
     align-self: auto;
     align-items: stretch;
 }
@@ -182,32 +186,37 @@ p:first-letter {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr max-content 1fr;
+    grid-template-columns:1fr 1fr;
     gap: 5px;
     column-gap: 5px;
     justify-items: center;
 }
 
-.item1 {
+#item1 {
     align-self: flex-start;
+    grid-column: span 3;
 }
 
-.item2 {
+#item2 {
     align-self: center;
 }
 
-.item3 {
+#item3 {
     align-self: flex-end;
 }
 
 @media screen and (max-width: 992px) {
-    .column {
-      width: 50%;
+    img {
+      position: static;
     }
 }
 
 button:hover {
     color: rgb(91, 91, 234);
+}
+
+nav a:hover {
+    color: rgb(35, 35, 213);
 }
 
 button:active {
