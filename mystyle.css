@@ -1,20 +1,7 @@
 body {
     /* set background color */
     background-color: #f9f9f9;
-    font-family: Andale Mono, Helvetica, sans-serif;
-}
-
-@font-face {
-    font-family: myFont;
-    src: url(https://fonts.google.com/specimen/Staatliches);
-}
-
-html {
-    font-family: "myFont", "Bitstream Vera Serif", serif;
-}
-
-.p {
-    font-family: myFont;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .center {
